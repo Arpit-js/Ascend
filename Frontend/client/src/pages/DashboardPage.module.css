@@ -1,0 +1,43 @@
+.dashboardPage {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.roleSelectorCard {
+  width: 100%;
+}
+
+.sectionTitle {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.sectionSubtitle {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.centerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+.errorText {
+  color: #ef4444;
+  font-weight: 500;
+}
+
+.recommendationsSection {
+  margin-top: 1rem;
+}
+
+.recommendationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}

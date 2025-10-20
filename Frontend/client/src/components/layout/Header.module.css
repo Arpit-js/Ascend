@@ -1,0 +1,142 @@
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  height: 65px; /* Fixed height */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerIconWrapper {
+  display: flex; /* Visible on mobile */
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: var(--radius-md);
+  font-size: 1.25rem;
+}
+
+.headerIconWrapper:hover {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.headerMenuIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.headerTitle {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.headerRight {
+  position: relative;
+}
+
+.userAvatarContainer {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Reset button padding */
+}
+
+.userAvatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileDropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 220px;
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+  z-index: 50;
+  overflow: hidden;
+  padding: 0.5rem 0;
+}
+
+.dropdownHeader {
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dropdownDivider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 0.5rem 0;
+}
+
+.profileDropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profileDropdown li a,
+.logoutButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+}
+
+.profileDropdown li a:hover,
+.logoutButton:hover {
+  background-color: var(--bg-tertiary);
+  color: var(--accent-primary);
+}
+
+.dropdownIcon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.7;
+}
+
+@media (min-width: 769px) {
+  .mainHeader {
+    padding: 1rem 2rem;
+  }
+  .headerIconWrapper {
+    display: none; /* Hide hamburger on desktop */
+  }
+}
