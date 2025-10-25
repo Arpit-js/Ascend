@@ -1,0 +1,70 @@
+/* Pathfinder-main/Frontend/client/src/components/common/Button.css */
+.btn {
+  padding: 0.8rem 1.6rem; /* Adjust padding for neumorphic feel */
+  border: none;
+  border-radius: 50px; /* Pill shape */
+  font-size: 1rem;
+  font-weight: 600; /* Bolder */
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  display: inline-flex; /* Use inline-flex for better alignment if icons are used */
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--primary); /* Default white */
+  color: var(--text-secondary); /* Default gray text */
+  box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light);
+  white-space: nowrap; /* Prevent text wrapping */
+  outline: none; /* Remove default outline */
+}
+
+.btn:hover:not(:disabled) {
+  box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+  transform: translateY(-1px);
+  color: var(--accent); /* Black text on hover */
+}
+
+.btn:active:not(:disabled) {
+  box-shadow: inset 2px 2px 4px var(--shadow-dark), inset -2px -2px 4px var(--shadow-light);
+  transform: translateY(1px);
+  color: var(--accent);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: inset 2px 2px 4px var(--shadow-dark), inset -2px -2px 4px var(--shadow-light);
+}
+
+/* Primary Button (Active State Style) */
+.btn-primary {
+  background-color: var(--accent); /* Black background */
+  color: var(--accent-text); /* White text */
+  /* Keep neumorphic shadow but slightly adjust for dark background */
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.3), -3px -3px 6px rgba(70,70,70,0.2);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #333; /* Slightly lighter black on hover */
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.3), -4px -4px 8px rgba(70,70,70,0.2);
+  transform: translateY(-1px);
+  color: var(--accent-text); /* Keep text white */
+}
+
+.btn-primary:active:not(:disabled) {
+  background-color: #000; /* Black on active */
+  box-shadow: inset 2px 2px 4px rgba(0,0,0,0.4), inset -2px -2px 4px rgba(70,70,70,0.3);
+  transform: translateY(1px);
+  color: var(--accent-text);
+}
+
+/* Secondary Button (Standard Neumorphic White) */
+.btn-secondary {
+  /* Inherits base .btn styles (white, gray text, neumorphic shadow) */
+}
+
+/* Add specific styles if secondary needs to differ beyond base .btn */
+/* For example, if you want a subtle border: */
+/* .btn-secondary { */
+/* border: 1px solid var(--background); */
+/* } */

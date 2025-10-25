@@ -1,0 +1,70 @@
+/* Pathfinder-main/Frontend/client/src/pages/DashboardPage.css */
+.dashboard-page h1 {
+  font-size: 1.8rem; /* Adjusted size */
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 2rem; /* Increased spacing */
+  color: var(--text-primary);
+}
+
+/* Apply consistent spacing for the dropdown */
+.dashboard-page .custom-dropdown-container {
+  margin-bottom: 2rem;
+  max-width: 400px; /* Optional: constrain width */
+}
+
+/* SkillGapDisplay will be inside a Card, styles are in its own CSS */
+
+.recommendations-section {
+  margin-top: 2.5rem;
+}
+
+.recommendations-section h2 {
+    font-size: 1.5rem; /* Adjusted size */
+    font-weight: 600;
+    margin-bottom: 1.5rem; /* Increased spacing */
+    color: var(--text-primary);
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem; /* Increased gap */
+}
+
+/* Styles for individual course cards within the grid */
+.courses-grid .card {
+  /* Card base styles are already neumorphic */
+  padding: 1.5rem; /* Adjust padding if needed */
+  text-align: center;
+}
+
+.course-image {
+  width: 100%;
+  height: 150px; /* Fixed height for consistency */
+  object-fit: cover;
+  border-radius: calc(var(--border-radius) - 10px); /* Slightly less rounded than card */
+  margin-bottom: 1rem;
+  border: 1px solid var(--background); /* Subtle border */
+}
+
+.courses-grid h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.courses-grid p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.placeholder-text {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    text-align: center;
+    padding: 2rem 0;
+}

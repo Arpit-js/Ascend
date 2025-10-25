@@ -1,0 +1,62 @@
+/* Pathfinder-main/Frontend/client/src/App.css */
+:root {
+  /* Neumorphic Light Theme Variables */
+  --background: #F5F5F5; /* Light Gray background */
+  --primary: #FFFFFF; /* White for elements */
+  --text-primary: #333333; /* Darker text for readability */
+  --text-secondary: #888888; /* Gray text for inactive/secondary elements */
+  --accent: #000000; /* Black accent for active states */
+  --accent-text: #FFFFFF; /* White text on black background */
+  --shadow-light: rgba(255, 255, 255, 0.7);
+  --shadow-dark: rgba(210, 210, 210, 0.5); /* Slightly darker gray shadow */
+  --inner-shadow-light: rgba(255, 255, 255, 0.9);
+  --inner-shadow-dark: rgba(210, 210, 210, 0.7);
+
+  --border-radius: 20px; /* Large radius for neumorphic elements */
+  --transition-speed: 0.2s ease-in-out;
+
+  /* Font */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 500; /* Medium weight */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background);
+  color: var(--text-primary); /* Default text color is now dark */
+  /* Prevent horizontal scrollbar caused by the push effect */
+  overflow-x: hidden;
+}
+
+.app-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+  transition: transform 0.3s ease-in-out;
+  background-color: var(--background); /* Ensure background covers */
+}
+
+.page-content {
+  flex-grow: 1;
+  padding: 2rem 3rem;
+  overflow-y: auto;
+}
+.page-content::-webkit-scrollbar { display: none; }
+.page-content { -ms-overflow-style: none; scrollbar-width: none; }
+
+
+@media (min-width: 768px) {
+  /* Desktop styles */
+}

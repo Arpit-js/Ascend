@@ -1,0 +1,135 @@
+.career-paths-page h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.timeline-node {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.role-card {
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.role-card:hover {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+.role-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.role-skills-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.skill-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--border-color);
+}
+
+.skill-dot.have {
+  background-color: var(--accent-green);
+}
+
+.skill-dot.need {
+  background-color: var(--accent-orange);
+}
+
+.role-details {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.role-details h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.details-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  color: var(--sidebar-bg);
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.skill-tag.have {
+  background-color: var(--accent-green);
+}
+
+.skill-tag.need {
+  background-color: var(--accent-orange);
+}
+
+/* --- NEW STYLES --- */
+.responsibilities-title {
+  margin-top: 1.5rem; /* Add space above responsibilities */
+}
+
+.responsibilities-text {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+/* --- END NEW STYLES --- */
+
+
+.timeline-connector {
+  width: 3px;
+  height: 40px;
+  background-color: var(--border-color);
+  border-radius: 2px;
+}
+
+@media (min-width: 992px) {
+  .timeline-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .timeline-connector {
+    width: 60px;
+    height: 3px;
+    margin-top: 2rem;
+  }
+  .timeline-node {
+    max-width: 300px;
+  }
+}

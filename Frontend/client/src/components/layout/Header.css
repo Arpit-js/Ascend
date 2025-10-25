@@ -1,0 +1,152 @@
+/* Pathfinder-main/Frontend/client/src/components/layout/Header.css */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem; /* Adjusted padding */
+  background-color: var(--background); /* Use main background */
+  border-bottom: 1px solid var(--shadow-dark); /* Subtle border */
+  height: 60px; /* Fixed height */
+  box-sizing: border-box;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.app-name {
+  font-size: 1.5rem; /* Larger font size */
+  font-weight: 600; /* Slightly bolder */
+  color: var(--text-primary);
+  margin: 0;
+  text-align: center;
+  flex-grow: 1; /* Center the name */
+}
+
+.header-right {
+  position: relative;
+  display: flex; /* Align button */
+  align-items: center; /* Align button */
+}
+
+.user-avatar-button {
+  width: 44px; /* Slightly larger */
+  height: 44px;
+  border-radius: 50%; /* Perfect circle */
+  background-color: var(--primary);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light);
+  transition: all var(--transition-speed);
+}
+
+.user-avatar-button:hover {
+  box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+  transform: translateY(-1px);
+}
+
+.user-avatar-button:active {
+  box-shadow: inset 2px 2px 4px var(--shadow-dark), inset -2px -2px 4px var(--shadow-light);
+  transform: translateY(1px);
+}
+
+.user-avatar-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary); /* Icon color */
+}
+
+.user-avatar-placeholder svg {
+  width: 20px;
+  height: 20px;
+}
+
+
+/* --- Dropdown Styles --- */
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 15px); /* Position below button */
+  right: 0;
+  width: 220px; /* Slightly wider */
+  background-color: var(--primary); /* White background */
+  border-radius: var(--border-radius);
+  box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
+  z-index: 50;
+  overflow: hidden; /* Ensure rounded corners */
+  padding: 0.5rem 0; /* Add padding top/bottom */
+}
+
+.dropdown-header {
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: var(--background); /* Light gray divider */
+  margin: 0.5rem 1rem;
+}
+
+.profile-dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-dropdown li a, .logout-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem; /* Consistent padding */
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+}
+
+.profile-dropdown li a svg, .logout-button svg {
+ color: var(--text-secondary); /* Icon color */
+ transition: color var(--transition-speed);
+}
+
+
+.profile-dropdown li a:hover, .logout-button:hover {
+  background-color: var(--background); /* Light hover */
+  color: var(--accent); /* Black text on hover */
+}
+
+.profile-dropdown li a:hover svg, .logout-button:hover svg {
+  color: var(--accent); /* Black icon on hover */
+}
+
+@media (min-width: 768px) {
+  .main-header {
+    padding: 1rem 3rem;
+  }
+}

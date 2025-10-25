@@ -1,0 +1,77 @@
+/* Pathfinder-main/Frontend/client/src/components/dashboard/SkillGapDisplay.css */
+/* Inherits neumorphic card style from parent Card component */
+
+.skill-gap-analysis h2 {
+  font-size: 1.4rem; /* Adjusted size */
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 2rem; /* Increased spacing */
+  color: var(--text-primary);
+  text-align: center; /* Center title */
+}
+
+.skill-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.skill-column h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-align: center; /* Center column titles */
+}
+
+.badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center; /* Center badges */
+}
+
+/* Base style for all skill badges - neumorphic pill */
+.skill-badge {
+  padding: 0.6rem 1.2rem; /* Adjust padding */
+  border-radius: 50px; /* Pill shape */
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: var(--primary); /* White */
+  color: var(--text-secondary); /* Gray text */
+  box-shadow: 2px 2px 5px var(--shadow-dark), -2px -2px 5px var(--shadow-light); /* Smaller shadow for badges */
+  transition: all var(--transition-speed);
+}
+
+/* Black badge for matched/required/owned skills */
+.skill-badge.matched {
+  background-color: var(--accent); /* Black */
+  color: var(--accent-text); /* White text */
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.3), -1px -1px 3px rgba(70,70,70,0.2);
+}
+
+/* Optional: Different style for missing skills if desired */
+/* .skill-badge.missing { */
+  /* background-color: #ffebee; /* Example: light red */
+  /* color: #c62828; /* Example: dark red */
+  /* box-shadow: inset 1px 1px 2px rgba(210, 210, 210, 0.7), inset -1px -1px 2px rgba(255, 255, 255, 0.9); */
+/* } */
+
+.placeholder-text {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+  .skill-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+  .skill-column h3 {
+    text-align: left; /* Align titles left on larger screens */
+  }
+  .badges-container {
+    justify-content: flex-start; /* Align badges left */
+  }
+}

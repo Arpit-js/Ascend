@@ -1,0 +1,115 @@
+/* Pathfinder-main/Frontend/client/src/pages/LoginPage.css */
+.login-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px); /* Adjust for header height */
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px; /* Slightly wider */
+  text-align: center;
+}
+
+.login-form h2 {
+  font-size: 1.8rem; /* Adjusted size */
+  font-weight: 600;
+  margin-bottom: 2.5rem; /* More spacing */
+  color: var(--text-primary);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-secondary); /* Lighter label color */
+  font-size: 0.9rem;
+}
+
+/* Neumorphic Input Style */
+.form-group input {
+  width: 100%;
+  padding: 0.9rem 1.2rem; /* Adjusted padding */
+  font-size: 1rem;
+  border-radius: 50px; /* Pill shape */
+  border: none; /* Remove border */
+  background-color: var(--primary); /* White background */
+  color: var(--text-primary);
+  box-sizing: border-box;
+  box-shadow: inset 2px 2px 4px var(--shadow-dark), inset -2px -2px 4px var(--shadow-light); /* Inner shadow */
+  transition: box-shadow var(--transition-speed);
+  outline: none;
+}
+
+.form-group input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+.form-group input:focus {
+   /* Optional: slightly enhance shadow on focus */
+   box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light);
+}
+
+.login-form .btn { /* Ensure button takes full width */
+  width: 100%;
+  margin-top: 1rem; /* Space above button */
+}
+
+.login-links {
+  margin-top: 2rem; /* More space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.login-links a {
+  color: var(--accent); /* Use black for links */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-speed);
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+  color: #555; /* Darker gray on hover */
+}
+
+/* Status Messages */
+.reset-instruction {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.status-message {
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: var(--border-radius); /* Use neumorphic radius */
+    font-weight: 500;
+    text-align: center;
+    border: 1px solid transparent; /* Base border */
+    box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light); /* Subtle shadow */
+}
+
+.status-message.success {
+    background-color: #e0f2fe; /* Light blue background */
+    color: #0c4a6e; /* Dark blue text */
+    border-color: #bae6fd; /* Lighter blue border */
+}
+
+.status-message.error {
+    background-color: #fee2e2; /* Light red */
+    color: #991b1b; /* Dark red text */
+    border-color: #fecaca; /* Lighter red border */
+}

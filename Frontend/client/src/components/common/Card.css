@@ -1,0 +1,15 @@
+/* Pathfinder-main/Frontend/client/src/components/common/Card.css */
+.card {
+  background-color: var(--primary); /* White background */
+  border-radius: var(--border-radius); /* Use global radius */
+  padding: 2rem; /* Generous padding */
+  box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light); /* Neumorphic shadow */
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  margin-bottom: 1.5rem; /* Add some default spacing below cards */
+}
+
+/* Optional: Slight lift on hover */
+.card:hover {
+  /* transform: translateY(-2px); */
+  /* box-shadow: 7px 7px 14px var(--shadow-dark), -7px -7px 14px var(--shadow-light); */
+}

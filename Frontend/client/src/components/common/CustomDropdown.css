@@ -1,0 +1,104 @@
+/* Pathfinder-main/Frontend/client/src/components/common/CustomDropdown.css */
+.custom-dropdown-container {
+  position: relative;
+  width: 100%; /* Ensure it takes full width */
+}
+
+.dropdown-button {
+  width: 100%;
+  padding: 0.8rem 1.2rem; /* Consistent padding */
+  font-size: 1rem;
+  text-align: left;
+  border-radius: 50px; /* Pill shape */
+  border: none; /* Remove border */
+  background-color: var(--primary); /* White background */
+  color: var(--text-primary); /* Dark text */
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: inset 2px 2px 4px var(--shadow-dark), inset -2px -2px 4px var(--shadow-light); /* Inner shadow for input feel */
+  transition: all var(--transition-speed);
+  outline: none;
+}
+
+.dropdown-button:hover {
+  /* Subtle brightness increase on hover */
+  filter: brightness(1.02);
+}
+
+.dropdown-button.open {
+   /* Optional: slightly different shadow when open */
+   box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light);
+}
+
+.dropdown-button span:first-child {
+  /* Style for the displayed text */
+  color: var(--text-primary);
+}
+
+/* Placeholder text style */
+.dropdown-button span:first-child:empty::before {
+  content: attr(data-placeholder); /* Use placeholder attribute if needed or adjust JS */
+  color: var(--text-secondary);
+}
+.dropdown-button:not(:focus) span:first-child:empty {
+   color: var(--text-secondary);
+}
+
+
+/* Chevron arrow */
+.dropdown-arrow {
+  border: solid var(--text-secondary);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  margin-left: 1rem; /* Space between text and arrow */
+}
+
+.dropdown-arrow.open {
+  transform: rotate(-135deg);
+}
+
+.dropdown-list {
+  position: absolute;
+  top: calc(100% + 8px); /* Space below the button */
+  left: 0;
+  width: 100%;
+  background-color: var(--primary); /* White background */
+  border-radius: var(--border-radius); /* Rounded corners */
+  box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light); /* Neumorphic shadow */
+  list-style-type: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  z-index: 100; /* Ensure it's above other elements */
+  max-height: 15rem; /* Limit height */
+  overflow-y: auto;
+  border: 1px solid var(--background); /* Subtle border matching background */
+}
+
+/* Scrollbar styling (optional, for aesthetics) */
+.dropdown-list::-webkit-scrollbar { width: 6px; }
+.dropdown-list::-webkit-scrollbar-track { background: transparent; }
+.dropdown-list::-webkit-scrollbar-thumb { background: var(--shadow-dark); border-radius: 3px; }
+.dropdown-list::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
+
+.dropdown-list li {
+  padding: 0.75rem 1.2rem;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.dropdown-list li:hover {
+  background-color: var(--background); /* Light gray hover */
+  color: var(--accent); /* Black text */
+}
+
+.dropdown-list li.selected {
+  background-color: var(--accent); /* Black background for selected */
+  color: var(--accent-text); /* White text */
+  font-weight: 500;
+}

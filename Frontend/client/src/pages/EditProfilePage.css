@@ -1,0 +1,158 @@
+/* Pathfinder-main/Frontend/client/src/pages/EditProfilePage.css */
+.edit-profile-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.edit-profile-page h1 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.edit-profile-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Card styles are already global */
+
+.edit-profile-page h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  /* Use the light shadow as a border color */
+  border-bottom: 1px solid var(--shadow-dark); 
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary); /* Ensure text is dark */
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary); /* Use secondary gray text */
+  font-size: 0.9rem;
+  padding-left: 0.5rem; /* Indent label slightly */
+}
+
+/* Neumorphic Input Styles */
+.form-group input, 
+.form-group textarea,
+.achievement-edit-item input {
+  width: 100%;
+  padding: 0.9rem 1.2rem; /* Adjusted padding */
+  font-size: 1rem;
+  border-radius: 50px; /* Pill shape */
+  border: none; /* Remove border */
+  background-color: var(--primary); /* White background */
+  color: var(--text-primary); /* Dark text */
+  box-sizing: border-box;
+  box-shadow: inset 2px 2px 4px var(--shadow-dark), inset -2px -2px 4px var(--shadow-light); /* Inner shadow */
+  transition: box-shadow var(--transition-speed);
+  outline: none;
+}
+
+.form-group textarea {
+    border-radius: var(--border-radius); /* Make textareas less pill-shaped */
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus,
+.achievement-edit-item input:focus {
+   box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light);
+}
+
+.avatar-upload-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.edit-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* Add neumorphic shadow to the avatar preview */
+  box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light);
+}
+
+/* Neumorphic Upload Button Style */
+.upload-label {
+  padding: 0.8rem 1.6rem; /* Match button padding */
+  border: none;
+  border-radius: 50px; /* Pill shape */
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  background-color: var(--primary); /* Default white */
+  color: var(--text-secondary); /* Default gray text */
+  box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light);
+  display: inline-block;
+}
+
+.upload-label:hover {
+  box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+  transform: translateY(-1px);
+  color: var(--accent); /* Black text on hover */
+}
+
+.upload-label:active {
+  box-shadow: inset 2px 2px 4px var(--shadow-dark), inset -2px -2px 4px var(--shadow-light);
+  transform: translateY(1px);
+}
+
+#avatar-upload {
+  display: none;
+}
+
+.achievement-edit-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Remove button (X) */
+.remove-button {
+  background: none;
+  border: none;
+  color: var(--text-secondary); /* Gray color */
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+  transition: color var(--transition-speed);
+}
+
+.remove-button:hover {
+  color: var(--accent); /* Black on hover */
+}
+
+@media (min-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .form-group.full-width {
+    grid-column: 1 / -1;
+  }
+}
